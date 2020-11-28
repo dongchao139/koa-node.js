@@ -5,7 +5,10 @@ const bodyParser = require('koa-bodyparser');
 const views = require('koa-views');
 const statics = require('koa-static');
 const router = require('./modues/router');
+// 使用file协议安装本地模块
+const utils = require('utils');
 
+console.log("a+b="+utils.add('a','b'));
 const app = new Koa();
 app.use(bodyParser());
 app.use(cors());
